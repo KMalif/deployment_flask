@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["python38", "postgresql", "pipenv", "gcc", "libGL"]
+nixPkgs = ["python38", "postgresql", "pipenv", "gcc", "libGL", "libgl1-mesa-glx"]
 
 [phases.install]
 cmd = "python -m venv --copies /opt/venv && ./otp/venv/bin/activate && pip install -r requirements.txt"
