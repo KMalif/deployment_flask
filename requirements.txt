@@ -31,6 +31,7 @@ oauthlib==3.2.2
 opt-einsum==3.3.0
 opencv-python-headless==4.7.0.72
 PyOpenGL==3.1.7
+libgl1-mesa-glx==9.0.0
 packaging==23.1
 pipreqs==0.4.13
 protobuf==4.23.3
