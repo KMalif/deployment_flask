@@ -29,7 +29,7 @@ mtcnn==0.1.1
 numpy==1.23.5
 oauthlib==3.2.2
 opt-einsum==3.3.0
-opencv-python==4.7.0.72
+opencv-python-headless==4.7.0.72
 packaging==23.1
 pipreqs==0.4.13
 protobuf==4.23.3
