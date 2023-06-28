@@ -1,7 +1,7 @@
 from app import app
 from flask import request
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from app.controllers import hairModel, mitraController, newsController, userController, recomendationsController, wishlistController
+from app.controllers import hairModel, mitraController, newsController, userController, wishlistController
 
 
 @app.route('/user', methods=['GET', 'PUT'])
@@ -51,25 +51,25 @@ def mitraById(id):
     elif (request.method == 'DELETE'):
         return mitraController.deleteMitra(id)
 
-@app.route('/predict', methods=['POST'])
-@jwt_required()
-def prediksi():
-    if(request.method == 'POST'):
-        return recomendationsController.predict()
-    elif(request.method == 'GET'):
-        return recomendationsController.getAllRecomendation()
+# @app.route('/predict', methods=['POST'])
+# @jwt_required()
+# def prediksi():
+#     if(request.method == 'POST'):
+#         return recomendationsController.predict()
+#     elif(request.method == 'GET'):
+#         return recomendationsController.getAllRecomendation()
 
-@app.route('/recomendations', methods=['POST', 'GET'])
-def recomendations():
-    if(request.method == 'POST'):
-        return recomendationsController.postRecomendations()
-    elif(request.method == 'GET'):
-        return recomendationsController.getAllRecomendation()
+# @app.route('/recomendations', methods=['POST', 'GET'])
+# def recomendations():
+#     if(request.method == 'POST'):
+#         return recomendationsController.postRecomendations()
+#     elif(request.method == 'GET'):
+#         return recomendationsController.getAllRecomendation()
 
-@app.route('/recomendations/<id>', methods=['GET'])
-@jwt_required()
-def detailRecomendation(id):
-    return recomendationsController.getRecomendationById(id)
+# @app.route('/recomendations/<id>', methods=['GET'])
+# @jwt_required()
+# def detailRecomendation(id):
+#     return recomendationsController.getRecomendationById(id)
 
 
 @app.route('/news', methods=['POST', 'GET'])
