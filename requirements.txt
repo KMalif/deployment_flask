@@ -3,6 +3,7 @@ astunparse==1.6.3
 cachetools==5.3.1
 certifi==2023.5.7
 charset-normalizer==3.1.0
+cloudinary==1.28.0
 docopt==0.6.2
 Flask==2.3.2
 Flask-Cors==3.0.10
@@ -27,6 +28,7 @@ ml-dtypes==0.2.0
 numpy==1.23.5
 oauthlib==3.2.2
 opt-einsum==3.3.0
+opencv-python==4.7.0.72
 packaging==23.1
 pipreqs==0.4.13
 protobuf==4.23.3
