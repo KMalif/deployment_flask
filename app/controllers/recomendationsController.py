@@ -37,12 +37,12 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 #model 
-with open('model/faceshape_model.json', 'r') as json_file:
-    json_savedModel = json_file.read()
+# with open('model/faceshape_model.json', 'r') as json_file:
+#     json_savedModel = json_file.read()
 
-model = tf.keras.models.model_from_json(json_savedModel)
-# model = load_model(
-#     'model/vgg16-face-1/')
+# model = tf.keras.models.model_from_json(json_savedModel)
+model = load_model(
+    'model/model.h5')
 detector = MTCNN()
 
 

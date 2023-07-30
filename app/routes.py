@@ -1,7 +1,7 @@
 from app import app
 from flask import request
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from app.controllers import hairModel, mitraController, newsController, userController, recomendationsController, wishlistController
+from app.controllers import hairModel, mitraController, newsController, userController, wishlistController
 
 
 @app.route('/user', methods=['GET', 'PUT'])
