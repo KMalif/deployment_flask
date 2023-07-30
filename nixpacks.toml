@@ -2,7 +2,7 @@
 nixPkgs = ["python38", "postgresql", "pipenv", "gcc", "libGL"]
 
 [phases.install]
-cmd = "python -m venv --copies /opt/venv && ./otp/venv/bin/activate && pip install -r requirements.txt"
+cmd = "nix-shell -p libGL && python -m venv --copies /opt/venv && ./otp/venv/bin/activate && pip install -r requirements.txt"
 
 [phases.start]
 cmd = "gunicorn run:app"
